@@ -20,13 +20,7 @@ const About = () => {
   return (
     <>
     
-    <p className="app__profiles-intro bold-text">Introduction</p>
-    <h2 class="head-text"><span>Overview.</span> </h2>
 
-
-    <div className="app__profile-item-about ">
-    <p> I am a software developer specializing in front-end development, with a passion for creating user-friendly and visually stunning websites. Proficient in HTML, CSS, JavaScript, and React. In addition to my front-end skills, I also have experience in back-end development languages such as Python and Node.js, allowing me to build dynamic and interactive web experiences. I stay abreast of the latest industry trends and best practices. I am dedicated to continuous learning and improvement, always seeking new challenges and opportunities to enhance my skills as a software developer.</p>
-    </div>
 
       <h2 className="head-text">Building Seamless <span>Digital Experiences</span> <br />for  <span>Business Advancement</span></h2>
 
