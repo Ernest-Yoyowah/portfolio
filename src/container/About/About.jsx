@@ -22,7 +22,7 @@ const About = () => {
         <span>Digital Experiences</span>
       </h2>
 
-      <div className="app__profiles ">
+      <div className="app__profiles">
         {abouts.map((about, index) => (
           <motion.div
             whileInView={{ opacity: 1 }}
