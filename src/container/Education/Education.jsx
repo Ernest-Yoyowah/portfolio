@@ -19,9 +19,8 @@ const Education = () => {
 
   return (
     <>
-      <h2 className="head-text_edu">Education</h2>
-
       <div className="app__education-container">
+        <h2 className="head-text_edu">Education</h2>
         <motion.div className="app__education-list">
           {educations.map((education) => (
             <motion.div

@@ -1,8 +1,7 @@
-// Education.scss
 .app__education-container {
-  position: relative; // Add this line to establish a stacking context
+  //   position: relative;
   width: 80%;
-  margin-top: 3rem;
+  margin-top: -10rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -14,66 +13,57 @@
 }
 
 .head-text_edu {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2; // Ensure it's above other elements only in this container
+  font-size: 2.75rem;
+  font-weight: 800;
+  text-align: center;
+  color: var(--black-color);
+  text-transform: capitalize;
 }
 
-.app__education-list {
-  flex: 1;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  position: relative; // Add this line to establish a stacking context
+.app__education-item {
+  text-align: center;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease-in-out;
 
-  .app__education-item {
-    text-align: center;
-    margin-bottom: 2rem;
-    transition: all 0.3s ease-in-out;
+  .app__flex {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: #fef4f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
 
+    img {
+      width: 50%;
+      height: auto;
+    }
+
+    &:hover {
+      box-shadow: 0 0 25px #fef4f5;
+    }
+  }
+
+  .app__education-details {
+    margin-top: 1rem;
+
+    h3 {
+      font-weight: 500;
+      margin-top: 0.5rem;
+    }
+
+    p {
+      font-weight: 400;
+      color: var(--gray-color);
+      margin-top: 5px;
+    }
+  }
+
+  @media screen and (max-width: 450px) {
     .app__flex {
-      width: 90px;
-      height: 90px;
-      border-radius: 50%;
-      background-color: #fef4f5;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto;
-
-      img {
-        width: 50%;
-        height: auto;
-      }
-
-      &:hover {
-        box-shadow: 0 0 25px #fef4f5;
-      }
-    }
-
-    .app__education-details {
-      margin-top: 1rem;
-
-      h3 {
-        font-weight: 500;
-        margin-top: 0.5rem;
-      }
-
-      p {
-        font-weight: 400;
-        color: var(--gray-color);
-        margin-top: 5px;
-      }
-    }
-
-    @media screen and (max-width: 450px) {
-      .app__flex {
-        width: 70px;
-        height: 70px;
-      }
+      width: 70px;
+      height: 70px;
     }
   }
 }
