@@ -1,7 +1,6 @@
 // Education.jsx
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Tooltip } from "react-tooltip";
 
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
@@ -11,7 +10,7 @@ const Education = () => {
   const [educations, setEducations] = useState([]);
 
   useEffect(() => {
-    const query = '*[_type == "educations"]';
+    const query = '*[_type == "education"]';
 
     client.fetch(query).then((data) => {
       setEducations(data);
@@ -28,11 +27,16 @@ const Education = () => {
             <motion.div
               whileInView={{ opacity: [0, 1] }}
               transition={{ duration: 0.5 }}
-              className="app__education-item app__flex"
+              className="app__education-item"
               key={education.institution}
             >
               <div className="app__flex">
-                <img src={urlFor(education.icon)} alt={education.institution} />
+                {education.icon && (
+                  <img
+                    src={urlFor(education.icon).url()}
+                    alt={education.institution}
+                  />
+                )}
               </div>
               <div className="app__education-details">
                 <h3>{education.institution}</h3>
