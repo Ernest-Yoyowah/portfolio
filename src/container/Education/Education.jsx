@@ -19,7 +19,7 @@ const Education = () => {
 
   return (
     <>
-      <h2 className="head-text">Education</h2>
+      <h2 className="head-text_edu">Education</h2>
 
       <div className="app__education-container">
         <motion.div className="app__education-list">
