@@ -39,23 +39,8 @@ const Education = () => {
               </div>
               <div className="app__education-details">
                 <h3>{education.institution}</h3>
-                {education.degree && (
-                  <>
-                    <p>{`Degree: ${education.degree}`}</p>
-                    <p>{`Year: ${education.year}`}</p>
-                  </>
-                )}
-                {education.courses && (
-                  <>
-                    {education.courses.map((course, index) => (
-                      <div key={index}>
-                        <p>{`Course: ${course.name}`}</p>
-                        <p>{`Provider: ${course.provider}`}</p>
-                        <p>{`Year: ${course.year}`}</p>
-                      </div>
-                    ))}
-                  </>
-                )}
+                <p>{`Degree: ${education.degree}`}</p>
+                <p>{`Year: ${education.year}`}</p>
               </div>
             </motion.div>
           ))}
