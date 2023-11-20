@@ -20,8 +20,8 @@ const Education = () => {
   return (
     <>
       <div className="app__education-container">
-        <h2 className="head-text_edu">Education</h2>
         <motion.div className="app__education-list">
+          <h2 className="head-text_edu">Education</h2>
           {educations.map((education) => (
             <motion.div
               whileInView={{ opacity: [0, 1] }}

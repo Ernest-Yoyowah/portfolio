@@ -1,7 +1,7 @@
 .app__education-container {
   //   position: relative;
   width: 80%;
-  margin-top: -10rem;
+  margin-top: 0rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -18,11 +18,7 @@
   text-align: center;
   color: var(--black-color);
   text-transform: capitalize;
-  position: relative;
-  //   top: 50%;
-  //   left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
+  margin-bottom: 1rem;
 }
 
 .app__education-item {
