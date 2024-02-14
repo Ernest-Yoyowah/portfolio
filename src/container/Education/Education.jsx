@@ -39,7 +39,7 @@ const Education = () => {
               </div>
               <div className="app__education-details">
                 <h3>{education.institution}</h3>
-                <p>{`Degree: ${education.degree}`}</p>
+                <p>{`Programme: ${education.degree}`}</p>
                 <p>{`Year: ${education.year}`}</p>
               </div>
             </motion.div>
