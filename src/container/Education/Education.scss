@@ -1,0 +1,69 @@
+.app__education-container {
+  width: 80%;
+  margin-top: -10rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  @media screen and (max-width: 900px) {
+    width: 100%;
+  }
+}
+
+.head-text_edu {
+  font-size: 2.75rem;
+  font-weight: 800;
+  text-align: center;
+  color: var(--black-color);
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+
+.app__education-item {
+  text-align: center;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease-in-out;
+
+  .app__flex {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: #fef4f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+
+    img {
+      width: 50%;
+      height: auto;
+    }
+
+    &:hover {
+      box-shadow: 0 0 25px #fef4f5;
+    }
+  }
+
+  .app__education-details {
+    margin-top: 1rem;
+
+    h3 {
+      font-weight: 500;
+      margin-top: 0.5rem;
+    }
+
+    p {
+      font-weight: 400;
+      color: var(--gray-color);
+      margin-top: 5px;
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    .app__flex {
+      width: 70px;
+      height: 70px;
+    }
+  }
+}
