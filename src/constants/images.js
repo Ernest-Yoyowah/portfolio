@@ -37,6 +37,7 @@ import skype from "../assets/skype.png";
 import spotify from "../assets/spotify.png";
 import tailwind from "../assets/tailwind.png";
 import nextJS from "../assets/nextJS.png";
+import navLogo from "../assets/navLogo.png";
 
 export default {
   nextJS,
@@ -75,4 +76,5 @@ export default {
   spotify,
   cv,
   tailwind,
+  navLogo,
 };
