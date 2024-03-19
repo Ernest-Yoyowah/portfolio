@@ -10,7 +10,7 @@ import {
   Work,
   Education,
 } from "./container";
-import { Navbar } from "./components";
+import { Navbar, BlogPage } from "./components";
 
 import "./App.scss";
 
