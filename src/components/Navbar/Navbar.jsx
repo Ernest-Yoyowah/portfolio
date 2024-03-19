@@ -11,20 +11,20 @@ const Navbar = () => {
 
   return (
     <nav className="app__navbar">
-      <Link to="/" className="app__navbar-logo">
+      <a className="app__navbar-logo" href="/">
         <img src={images.navLogo} alt="logo" />
-      </Link>
+      </a>
       <ul className="app__navbar-links">
-        {["home", "about", "work", "skills", "contact", "Blog"].map((item) => (
+        {["home", "about", "work", "skills", "contact"].map((item) => (
           <li className="app__flex p-text" key={`link-${item}`}>
             <div />
-            {item === "Blog" ? (
-              <Link to="/blog">{item}</Link>
-            ) : (
-              <Link to={`#${item}`}>{item}</Link>
-            )}
+            <a href={`#${item}`}>{item}</a>
           </li>
         ))}
+        <li className="app__flex p-text">
+          <div />
+          <Link to="/blog">Blog</Link>
+        </li>
       </ul>
 
       <div className="app__navbar-menu">
@@ -37,21 +37,16 @@ const Navbar = () => {
           >
             <HiX onClick={() => setToggle(false)} />
             <ul>
-              {["home", "about", "work", "skills", "contact", "Blog"].map(
-                (item) => (
-                  <li key={item}>
-                    {item === "Blog" ? (
-                      <Link to="/blog" onClick={() => setToggle(false)}>
-                        {item}
-                      </Link>
-                    ) : (
-                      <Link to={`#${item}`} onClick={() => setToggle(false)}>
-                        {item}
-                      </Link>
-                    )}
-                  </li>
-                )
-              )}
+              {["home", "about", "work", "skills", "contact"].map((item) => (
+                <li key={item}>
+                  <a href={`#${item}`} onClick={() => setToggle(false)}>
+                    {item}
+                  </a>
+                </li>
+              ))}
+              <li className="app__flex p-text">
+                <Link to="/blog">Blog</Link>
+              </li>
             </ul>
           </motion.div>
         )}
