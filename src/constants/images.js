@@ -38,6 +38,7 @@ import spotify from "../assets/spotify.png";
 import tailwind from "../assets/tailwind.png";
 import nextJS from "../assets/nextJS.png";
 import navLogo from "../assets/navLogo.png";
+import homeIcon from "../assets/homeIcon.png";
 
 export default {
   nextJS,
@@ -77,4 +78,5 @@ export default {
   cv,
   tailwind,
   navLogo,
+  homeIcon,
 };
