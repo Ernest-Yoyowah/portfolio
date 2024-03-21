@@ -16,7 +16,7 @@ import python from "../assets/python.png";
 import react from "../assets/react.png";
 import redux from "../assets/redux.png";
 import sass from "../assets/sass.png";
-import typescript from "../assets/typescript.png";
+import typescript from "../assets/ts.png";
 import vue from "../assets/vue.png";
 
 import about01 from "../assets/about01.png";
@@ -36,7 +36,7 @@ import nb from "../assets/nb.png";
 import skype from "../assets/skype.png";
 import spotify from "../assets/spotify.png";
 import tailwind from "../assets/tailwind.png";
-import nextJS from "../assets/nextJS.png";
+import nextJS from "../assets/react (nextjs).png";
 import navLogo from "../assets/navLogo.png";
 import homeIcon from "../assets/homeIcon.png";
 
