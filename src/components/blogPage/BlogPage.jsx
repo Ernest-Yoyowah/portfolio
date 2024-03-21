@@ -39,26 +39,31 @@ const BlogPage = () => {
         </div>
       </nav>
 
-      <h2 className="header-text">read my blog</h2>
-
-      <div className="blog-posts-container">
-        {posts.map((post) => (
-          <motion.div
-            key={post._id}
-            whileInView={{ opacity: [0, 1] }}
-            transition={{ duration: 0.5 }}
-            className="blog-post"
-          >
-            <h3 className="blog-post-title">{post.title}</h3>
-            <p className="blog-post-author">Author: {post.author}</p>
-            <p className="blog-post-date">
-              Published on: {new Date(post.publishDate).toLocaleDateString()}
-            </p>
-            <Link to={`/blog/${post._id}`} className="blog-post-link">
-              Read more
-            </Link>
-          </motion.div>
-        ))}
+      <div className="blog-page">
+        <h2 className="blog-header">Read My Blog</h2>
+        <div className="blog-posts-container">
+          {posts.map((post) => (
+            <motion.div
+              key={post._id}
+              whileInView={{ opacity: [0, 1] }}
+              transition={{ duration: 0.5 }}
+              className="blog-post"
+            >
+              <h3 className="blog-post-title">{post.title}</h3>
+              <p className="blog-post-meta">
+                <span className="blog-post-author">Author: {post.author}</span>
+                <span className="blog-post-date">
+                  Published on:{" "}
+                  {new Date(post.publishDate).toLocaleDateString()}
+                </span>
+              </p>
+              <p className="blog-post-excerpt">{post.excerpt}</p>
+              <Link to={`/blog/${post._id}`} className="blog-post-link">
+                Read more
+              </Link>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </div>
   );
