@@ -39,7 +39,7 @@ const BlogPage = () => {
         </div>
       </nav>
 
-      <div className="blog-page">
+      <div className="blog-pageM">
         <h2 className="blog-header">Read My Blog</h2>
         <div className="blog-posts-container">
           {posts.map((post) => (
