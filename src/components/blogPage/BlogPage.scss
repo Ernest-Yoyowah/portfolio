@@ -33,3 +33,54 @@
 .app__blog a:hover {
   color: var(--secondary-color);
 }
+
+// BlogPage.scss
+.blog-page {
+  padding: 20px;
+}
+
+.blog-header {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.blog-posts-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.blog-post {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.blog-post-meta {
+  font-size: 14px;
+  color: #888;
+}
+
+.blog-post-excerpt {
+  margin-bottom: 10px;
+}
+
+.blog-post-link {
+  display: block;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.blog-post-link:hover {
+  color: #0056b3;
+}
