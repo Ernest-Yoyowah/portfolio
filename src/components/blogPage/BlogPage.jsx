@@ -48,6 +48,28 @@ const BlogPage = () => {
           <Link to="https://github.com/Ernest-Yoyowah">GitHub</Link>
           <Link to="https://www.linkedin.com/in/ernestyoyowah/">LinkedIn</Link>
         </div>
+
+        <div className="app__navbar-menu">
+          <HiOutlineMenu onClick={() => setToggle(true)} />
+
+          {toggle && (
+            <motion.div
+              whileInView={{ x: [200, 0] }} /*Updated from 300 */
+              transition={{ duration: 0.85, ease: "easeOut" }}
+            >
+              <HiX onClick={() => setToggle(false)} />
+              <ul>
+                <li className="app__block p-text">
+                  <Link to="/">Home</Link>
+                  <Link to="https://github.com/Ernest-Yoyowah">GitHub</Link>
+                  <Link to="https://www.linkedin.com/in/ernestyoyowah/">
+                    LinkedIn
+                  </Link>
+                </li>
+              </ul>
+            </motion.div>
+          )}
+        </div>
       </nav>
 
       <div className="blog-pageM">
