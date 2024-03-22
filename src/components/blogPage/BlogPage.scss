@@ -129,4 +129,13 @@
   .blog-navbar {
     justify-content: space-between;
   }
+
+  .app__block a {
+    display: block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 70%;
+    width: 100%;
+  }
 }
