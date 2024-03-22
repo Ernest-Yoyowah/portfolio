@@ -43,21 +43,20 @@
   margin-bottom: 5px;
 }
 
-// BlogPage.scss
 .blog-pageM {
   background: #ddd;
   padding: 20px;
   width: 100%;
-  margin: 0 auto; // Center horizontally
-  display: flex; // Use flexbox
-  flex-direction: column; // Align content vertically
-  align-items: center; // Center horizontally
+  margin: 0 auto;
+  display: grid;
+  gap: 20px;
+  justify-items: center;
 }
 
 .blog-header {
   font-size: 24px;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 0;
 }
 
 .blog-posts-container {
