@@ -78,6 +78,23 @@ const BlogPage = () => {
             <span className="blog-header-tag">Welcome to My Blog</span>
           </h2>
 
+          {/* Filter Section */}
+          <div className="app__work-filter">
+            {["UI/UX", "Web Dev", "College", "React JS", "All"].map(
+              (item, index) => (
+                <div
+                  key={index}
+                  onClick={() => handleWorkFilter(item)}
+                  className={`app__work-filter-item app__flex p-text ${
+                    activeFilter === item ? "item-active" : ""
+                  }`}
+                >
+                  {item}
+                </div>
+              )
+            )}
+          </div>
+
           {/* Blog Posts */}
           <div className="blog-posts-container">
             {filteredPosts.map((post) => (
