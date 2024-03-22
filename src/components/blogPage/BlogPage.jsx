@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { client } from "../../client";
 import "./BlogPage.scss";
 
+import { images } from "../../constants";
+
 const BlogPage = () => {
   const [posts, setPosts] = useState([]);
 
@@ -23,19 +25,13 @@ const BlogPage = () => {
   return (
     <div className="blog-page app__whitebg">
       <nav className="blog-navbar">
+        <a className="app__navbar-logo" href="/">
+          <img src={images.navLogo} alt="logo" />
+        </a>
         <div className="app__blog">
-          <Link to="/" className="p-text">
-            Home
-          </Link>
-          <Link to="https://github.com/Ernest-Yoyowah" className="p-text">
-            GitHub
-          </Link>
-          <Link
-            to="https://www.linkedin.com/in/ernestyoyowah/"
-            className="p-text"
-          >
-            LinkedIn
-          </Link>
+          <Link to="/">Home</Link>
+          <Link to="https://github.com/Ernest-Yoyowah">GitHub</Link>
+          <Link to="https://www.linkedin.com/in/ernestyoyowah/">LinkedIn</Link>
         </div>
       </nav>
 
