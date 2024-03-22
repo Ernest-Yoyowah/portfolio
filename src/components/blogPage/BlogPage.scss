@@ -16,7 +16,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 1200px;
   width: 100%;
 }
 
@@ -34,20 +33,10 @@
   color: var(--secondary-color);
 }
 
-.arrow {
-  width: 5px;
-  height: 5px;
-  background: transparent;
-  border-radius: 50%;
-
-  margin-bottom: 5px;
-}
-
 .blog-pageM {
   background: #ddd;
   padding: 20px;
   width: 100%;
-  margin: 0 auto;
   display: grid;
   gap: 20px;
   justify-items: center;
