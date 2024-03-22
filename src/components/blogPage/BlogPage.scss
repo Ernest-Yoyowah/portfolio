@@ -51,6 +51,11 @@
 .blog-pageM {
   background: #ddd;
   padding: 20px;
+  width: 100%;
+  margin: 0 auto; // Center horizontally
+  display: flex; // Use flexbox
+  flex-direction: column; // Align content vertically
+  align-items: center; // Center horizontally
 }
 
 .blog-header {
