@@ -37,9 +37,15 @@
   background: #ddd;
   padding: 20px;
   width: 100%;
-  display: grid;
+
   gap: 20px;
   justify-items: center;
+}
+
+.main-page {
+  width: 50%;
+  justify-items: center;
+  display: grid;
 }
 
 .blog-header {
