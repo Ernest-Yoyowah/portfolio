@@ -105,22 +105,16 @@
   text-align: center;
   margin-bottom: 20px;
 
-  /* Apply styles similar to app__work-filter-item */
   .blog-header-tag {
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
     background-color: #fff;
     color: #000;
     font-weight: 800;
-    margin-bottom: 20px; /* Adjust margin as needed */
+    margin-bottom: 20px;
     display: inline-block;
 
     transition: all 0.3s ease;
-
-    &:hover {
-      background-color: var(--secondary-color);
-      color: #fff;
-    }
 
     @media screen and (min-width: 2000px) {
       padding: 1rem 2rem;
