@@ -75,7 +75,7 @@ const BlogPage = () => {
       <div className="blog-pageM">
         <div className="main-page">
           <h2 className="blog-header">
-            <span className="blog-header-tag">Blog</span>
+            <span className="blog-header-tag">My Blog</span>
           </h2>
 
           {/* Filter Section */}
