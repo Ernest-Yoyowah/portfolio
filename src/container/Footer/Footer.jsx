@@ -60,7 +60,12 @@ const Footer = () => {
   return (
     <>
       <h2 className="head-text">Contact</h2>
-
+      <div className="animated-img">
+        <img
+          src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*tdqEyn7gNoOcczjObF7MNQ.gif"
+          alt="Animated Image"
+        />
+      </div>
       <div className="app__footer-cards">
         <div className="app__footer-card ">
           <img src={images.email} alt="email" />
