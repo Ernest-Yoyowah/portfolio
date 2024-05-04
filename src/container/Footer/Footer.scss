@@ -22,13 +22,11 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-
     margin: 1rem 0;
     padding: 1rem;
     border-radius: 10px;
     cursor: pointer;
     background-color: #fef4f5;
-
     transition: all 0.3s ease-in-out;
 
     img {
@@ -86,12 +84,10 @@
 
   div {
     width: 100%;
-
     margin: 0.75rem 0;
     border-radius: 10px;
     cursor: pointer;
     background-color: var(--primary-color);
-
     transition: all 0.3s ease-in-out;
 
     input,
@@ -101,7 +97,6 @@
       border: none;
       border-radius: 7px;
       background-color: var(--primary-color);
-
       font-family: var(--font-base);
       color: var(--secondary-color);
       outline: none;
@@ -121,13 +116,11 @@
     border-radius: 10px;
     border: none;
     background-color: var(--secondary-color);
-
     font-weight: 500;
     color: var(--white-color);
     outline: none;
     margin: 2rem 0 0 0;
     font-family: var(--font-base);
-
     transition: cubic-bezier(0.55, 0.085, 0.68, 0.53);
     cursor: pointer;
 
@@ -165,7 +158,6 @@
   justify-content: flex-end;
   align-items: center;
   flex-direction: row;
-
   padding: 1rem;
   gap: 20px;
 
@@ -176,11 +168,9 @@
     background-color: var(--white-color);
     margin: 0.25rem 0;
     border: 1px solid var(--lightGray-color);
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     transition: all 0.3s ease-in-out;
 
     svg {
@@ -201,7 +191,6 @@
     @media screen and (min-width: 2000px) {
       width: 70px;
       height: 70px;
-
       margin: 0.5rem 0;
 
       svg {
