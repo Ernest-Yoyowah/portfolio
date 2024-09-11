@@ -9,17 +9,21 @@ import {
   Education,
 } from "../../container";
 import { Navbar } from "../../components";
+import Demo from "../../container/Work/demo";
+import ArticlesPage from "../articlesPage/articlesPage";
 
 const Mainpage = () => {
   return (
     <>
-      <Navbar />
+      <Navbar link="/about" name="About" />
       <Header />
-      <About />
-      <Work />
-      <Skills />
-      <Education />
-      <Testimonial />
+      {/* <About /> */}
+      {/* <Work /> */}
+      <Demo />
+      <ArticlesPage />
+      {/* <Skills /> */}
+      {/* <Education /> */}
+      {/* <Testimonial /> */}
       <Footer />
     </>
   );

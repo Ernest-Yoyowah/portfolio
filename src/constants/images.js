@@ -25,6 +25,8 @@ import about03 from "../assets/about03.png";
 import about04 from "../assets/about04.png";
 
 import profile from "../assets/profile.png";
+import profile1 from "../assets/profile1.png";
+import profile2 from "../assets/p1.jpg";
 import circle from "../assets/circle.svg";
 import logo from "../assets/logo.png";
 
@@ -37,8 +39,9 @@ import skype from "../assets/skype.png";
 import spotify from "../assets/spotify.png";
 import tailwind from "../assets/tailwind.png";
 import nextJS from "../assets/react (nextjs).png";
-import navLogo from "../assets/navLogo.png";
+import navLogo from "../assets/logo-name.png";
 import homeIcon from "../assets/homeIcon.png";
+import aboutImage from "../assets/about-image.png";
 
 export default {
   nextJS,
@@ -46,6 +49,8 @@ export default {
   mobile,
   api,
   cpp,
+  profile1,
+  profile2,
   css,
   figma,
   flutter,
@@ -79,4 +84,5 @@ export default {
   tailwind,
   navLogo,
   homeIcon,
+  aboutImage,
 };

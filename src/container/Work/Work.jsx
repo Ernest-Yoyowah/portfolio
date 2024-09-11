@@ -38,33 +38,25 @@ const Work = () => {
 
   return (
     <>
-      <h2 className="head-text">
-        My Creative <span>Portfolio</span> Section
-      </h2>
-
-      <div className="app__work-filter">
-        {["UI/UX", "Web App", "Mobile App", "React JS", "Next JS", "All"].map(
-          (item, index) => (
-            <div
-              key={index}
-              onClick={() => handleWorkFilter(item)}
-              className={`app__work-filter-item app__flex p-text ${
-                activeFilter === item ? "item-active" : ""
-              }`}
-            >
-              {item}
-            </div>
-          )
-        )}
-      </div>
-
       <motion.div
         animate={animateCard}
         transition={{ duration: 0.5, delayChildren: 0.5 }}
-        className="app__work-portfolio"
+        // className="app__work-portfolio"
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(3, 1fr)", // 3 items on large screens
+          gap: "20px", // gap between grid items
+          width: "100%",
+          "@media (max-width: 1024px)": {
+            gridTemplateColumns: "repeat(2, 1fr)", // 2 items on tablets
+          },
+          "@media (max-width: 768px)": {
+            gridTemplateColumns: "repeat(1, 1fr)", // 1 item on mobile
+          },
+        }}
       >
         {filterWork.map((work, index) => (
-          <div className="app__work-item app__flex" key={index}>
+          <div key={index}>
             <div className="app__work-img app__flex">
               <img src={urlFor(work.imgUrl)} alt={work.name} />
 
@@ -117,8 +109,4 @@ const Work = () => {
   );
 };
 
-export default AppWrap(
-  MotionWrap(Work, "app__works"),
-  "work",
-  "app__primarybg"
-);
+export default Work;

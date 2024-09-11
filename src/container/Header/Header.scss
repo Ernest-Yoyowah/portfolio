@@ -1,9 +1,10 @@
 #home {
   position: relative;
-  background: url("../../assets/bgIMG.png");
+  // background: url("../../assets/bgIMG.png");
   background-size: cover;
   background-position: center;
   background-repeat: repeat;
+  background: white;
 
   // disable the default padding styles
   .app__wrapper {
@@ -16,12 +17,11 @@
 }
 
 .app__header {
-  flex: 1;
+  display: flex;
   width: 100%;
   height: 100%;
-  flex-direction: row;
 
-  padding: 6rem 2rem 0rem;
+  padding: 0rem 8.4rem 0rem;
 
   @media screen and (min-width: 2000px) {
     padding-top: 8rem;
@@ -33,6 +33,26 @@
 
   @media screen and (max-width: 450px) {
     padding: 6rem 1rem 2rem;
+  }
+}
+
+.about-text {
+  color: #081e57;
+  font-size: 26px;
+  font-weight: 400;
+}
+
+.about-paragraph-text {
+  font-size: 45px;
+  font-weight: 600;
+  margin-top: 11px;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  color: #081e57;
+
+  @media screen and (max-width: 768px) {
+    font-size: 32px;
+    line-height: 1.5;
   }
 }
 
@@ -59,9 +79,10 @@
   align-items: flex-end;
   flex-direction: column;
 
-  .badge-cmp,
+  .badge-cmp {
+    padding: 10rem 2rem;
+  }
   .tag-cmp {
-    padding: 1rem 2rem;
     background: var(--white-color);
     border-radius: 15px;
     flex-direction: row;
@@ -167,16 +188,20 @@
 
 .app__header-img {
   flex: 1;
-  height: 100%;
+  height: 20%;
 
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
   position: relative;
 
+  /* Ensures that any overflowing parts of the image are hidden */
+  overflow: hidden;
+
   img {
-    width: 100%;
-    object-fit: contain;
+    width: 20%;
+    height: 100%; /* Ensures the image fits the container */
+    object-fit: cover; /* This will crop the image to fit the container */
     z-index: 1;
   }
 
