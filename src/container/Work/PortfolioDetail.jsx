@@ -38,7 +38,7 @@ const PortfolioDetail = () => {
       >
         <Box sx={{ maxWidth: "1000px", margin: { md: "0 8rem", xs: "1rem" } }}>
           {/* Title */}
-          <Typography sx={{ fontWeight: "bold", mb: 2, fontSize: "2.7rem" }}>
+          <Typography sx={{ fontWeight: "bold", mb: 2, fontSize: "2.2rem" }}>
             {item.title}
           </Typography>
 
