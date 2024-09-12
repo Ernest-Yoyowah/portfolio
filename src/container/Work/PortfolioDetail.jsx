@@ -132,9 +132,9 @@ const PortfolioDetail = () => {
               {item.images.map((image, index) => (
                 <Grid
                   item
-                  xs={6} // 2 per row on mobile
-                  sm={6} // 2 per row on tablets
-                  md={4} // 3 per row on large screens
+                  xs={6} 
+                  sm={6} 
+                  md={4} 
                   key={index}
                 >
                   <Box
