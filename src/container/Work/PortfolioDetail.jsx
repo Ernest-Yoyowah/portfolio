@@ -130,13 +130,7 @@ const PortfolioDetail = () => {
           {item.images && item.images.length > 0 && (
             <Grid container spacing={2}>
               {item.images.map((image, index) => (
-                <Grid
-                  item
-                  xs={6} 
-                  sm={6} 
-                  md={4} 
-                  key={index}
-                >
+                <Grid item xs={6} sm={6} md={4} key={index}>
                   <Box
                     sx={{
                       position: "relative",
