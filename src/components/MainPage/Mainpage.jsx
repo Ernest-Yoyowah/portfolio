@@ -9,8 +9,8 @@ import {
   Education,
 } from "../../container";
 import { Navbar } from "../../components";
-import Demo from "../../container/Work/demo";
 import ArticlesPage from "../articlesPage/articlesPage";
+import Portfolio from "../../container/Work/Portfolio";
 
 const Mainpage = () => {
   return (
@@ -19,7 +19,7 @@ const Mainpage = () => {
       <Header />
       {/* <About /> */}
       {/* <Work /> */}
-      <Demo />
+      <Portfolio />
       <ArticlesPage />
       {/* <Skills /> */}
       {/* <Education /> */}

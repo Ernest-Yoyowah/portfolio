@@ -1,52 +1,8 @@
 import React, { useState } from "react";
 import { Box, Grid } from "@mui/material";
+import { portfolioItems } from "./portfolioItems";
 
-const Demo = () => {
-  const items = [
-    {
-      id: 1,
-      title: "Item 1",
-      imgUrl:
-        "https://yawantwiowusu.com/wp-content/uploads/2024/02/MTN-Rewards-300x300.jpg",
-      link: "#",
-    },
-    {
-      id: 2,
-      title: "Item 2",
-      imgUrl:
-        "https://yawantwiowusu.com/wp-content/uploads/2024/02/ubadi-500x500.jpg",
-      link: "#",
-    },
-    {
-      id: 3,
-      title: "Item 3",
-      imgUrl:
-        "https://yawantwiowusu.com/wp-content/uploads/2024/02/dexwin-2-500x500.jpg",
-      link: "#",
-    },
-    {
-      id: 4,
-      title: "Item 4",
-      imgUrl:
-        "https://yawantwiowusu.com/wp-content/uploads/2024/02/saving-grains-500x500.jpg",
-      link: "#",
-    },
-    {
-      id: 5,
-      title: "Item 5",
-      imgUrl:
-        "https://yawantwiowusu.com/wp-content/uploads/2024/02/MTN-Hoods-copy-500x500.jpg",
-      link: "#",
-    },
-    {
-      id: 6,
-      title: "Item 6",
-      imgUrl:
-        "https://yawantwiowusu.com/wp-content/uploads/2022/09/featured-imagesArtboard-1-copy-500x500.png",
-      link: "#",
-    },
-  ];
-
+const Portfolio = () => {
   const [hoveredItem, setHoveredItem] = useState(null);
 
   const handleMouseOver = (id) => setHoveredItem(id);
@@ -55,7 +11,7 @@ const Demo = () => {
   return (
     <Box sx={{ width: "100%", marginTop: "7rem" }}>
       <Grid container spacing={0}>
-        {items.map((item) => (
+        {portfolioItems.map((item) => (
           <Grid item key={item.id} xs={12} sm={6} lg={4}>
             <Box
               sx={{
@@ -76,7 +32,7 @@ const Demo = () => {
               onMouseOut={handleMouseOut}
             >
               <a
-                href={item.link}
+                href={`/portfolio/${item.slug}`}
                 style={{
                   textDecoration: "none",
                   color: "white",
@@ -113,4 +69,4 @@ const Demo = () => {
   );
 };
 
-export default Demo;
+export default Portfolio;

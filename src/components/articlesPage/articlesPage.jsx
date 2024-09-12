@@ -1,33 +1,7 @@
 import React from "react";
 import { Grid, Box, Typography } from "@mui/material";
 import ArticleCard from "./components/articleCard";
-
-const articles = [
-  {
-    id: 1,
-    title: "UI & UX",
-    description:
-      "A deep dive into how React components work and how to use them effectively.",
-    imageUrl:
-      "https://images.shiksha.com/mediadata/shikshaOnline/mailers/2021/naukri-learning/oct/27oct/What-is-UI-UX-Design.jpg",
-  },
-  {
-    id: 2,
-    title: "JavaScript ES6 Features",
-    description:
-      "Explore the new and powerful features introduced in ECMAScript 6.",
-    imageUrl:
-      "https://yawprecious.vercel.app/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F3lm8l8o5%2Fproduction%2Fdf539099197c82fdc1bbbfd942a9e7d29253a171-768x576.png&w=640&q=75",
-  },
-  {
-    id: 3,
-    title: "CSS Grid Layout",
-    description:
-      "Learn how to use CSS Grid to create responsive web layouts easily.",
-    imageUrl:
-      "https://yawprecious.vercel.app/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F3lm8l8o5%2Fproduction%2F4813843ad03105ff7ce48df656a249ab52fa6d09-768x576.png&w=640&q=75",
-  },
-];
+import { articles } from "./components/articles";
 
 const ArticlesPage = () => {
   return (

@@ -3,6 +3,7 @@ import Navbar from "../Navbar/Navbar";
 import { images } from "../../constants";
 import { Education } from "../../container";
 import { Box } from "@mui/material";
+import FooterCard from "../../container/Footer/FooterCard";
 
 const AboutPage = () => {
   return (
@@ -24,7 +25,7 @@ const AboutPage = () => {
           sx={{
             width: { md: "40%", xs: "100%" },
             background: "#ff9800",
-            height: { md: "70vh", xs: "60vh" },
+            height: { md: "70vh", xs: "60vh", sm: "80vh" },
             borderRadius: "15px",
             display: "flex",
             justifyContent: "center",
@@ -109,6 +110,7 @@ const AboutPage = () => {
           Co-operative Susu Collectors Association to launch Ubadi.
         </h2>
       </Box>
+      <FooterCard />
       {/* <Education /> */}
     </>
   );

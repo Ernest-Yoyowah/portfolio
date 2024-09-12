@@ -42,6 +42,27 @@ import nextJS from "../assets/react (nextjs).png";
 import navLogo from "../assets/logo-name.png";
 import homeIcon from "../assets/homeIcon.png";
 import aboutImage from "../assets/about-image.png";
+import MTNPulse from "../assets/pulse.png";
+import Autosurveil from "../assets/autosurveil.png";
+import Hygy from "../assets/hygy.png";
+import Jadaad from "../assets/jadaad.png";
+import Geritch from "../assets/geritch.png";
+import Keysrig from "../assets/keysrig.png";
+import GCTUQuickLinks from "../assets/gctu-quick-links.png";
+import GCTUFeed from "../assets/gctu-feed.png";
+import GCTUSQLDump from "../assets/gctu-sql-dump.png";
+import Jadaad2 from "../assets/jadaad-2.png";
+import Jadaad3 from "../assets/jadaad-3.png";
+import Jadaad4 from "../assets/jadaad-4.png";
+import Autosurveil2 from "../assets/autosurveil-2.png";
+import Autosurveil3 from "../assets/autosurveil-3.png";
+import Autosurveil4 from "../assets/autosurveil-4.png";
+import Autosurveil5 from "../assets/autosurveil-5.png";
+import Hygy1 from "../assets/hygy-1.png";
+import Hygy2 from "../assets/hygy-2.png";
+import Hygy3 from "../assets/hygy-3.png";
+import MTNPulse1 from "../assets/pulse-1.png";
+import MTNPulse2 from "../assets/pulse-2.png";
 
 export default {
   nextJS,
@@ -67,6 +88,27 @@ export default {
   typescript,
   vue,
   about01,
+  MTNPulse,
+  MTNPulse1,
+  MTNPulse2,
+  Keysrig,
+  GCTUQuickLinks,
+  GCTUSQLDump,
+  GCTUFeed,
+  Autosurveil,
+  Geritch,
+  Autosurveil2,
+  Autosurveil3,
+  Autosurveil4,
+  Autosurveil5,
+  Hygy,
+  Hygy1,
+  Hygy2,
+  Hygy3,
+  Jadaad,
+  Jadaad2,
+  Jadaad3,
+  Jadaad4,
   about02,
   about03,
   about04,

@@ -6,7 +6,7 @@ const ArticleCard = ({ article }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate(`/articles/${article.id}`); // Navigate to the detail page
+    navigate(`/articles/${article.slug}`);
   };
 
   return (
