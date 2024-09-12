@@ -71,7 +71,7 @@ const ArticleDetail = () => {
           </Box>
 
           {/* Title */}
-          <Typography sx={{ fontWeight: "bold", mb: 2, fontSize: "2.7rem" }}>
+          <Typography sx={{ fontWeight: "bold", mb: 2, fontSize: "2.2rem" }}>
             {article.title}
           </Typography>
 
