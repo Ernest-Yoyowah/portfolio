@@ -10,7 +10,7 @@ export const portfolioItems = [
     date: "August - 2024",
     description:
       "As a frontend developer at Dexwin Ltd, I worked on the MTN Pulse web app, embedded as a micro-app within MTN MyApp. This app serves millions of MTN Ghana customers, providing them seamless access to purchase airtime, recharge bundles, and access news content. I was responsible for enhancing the app’s user experience, improving performance under high traffic, and ensuring a responsive interface. I collaborated with cross-functional teams to deliver a streamlined and scalable solution.",
-    technologies: ["React", "Node.js", "CSS", "Material-UI", "Redux"],
+    technologies: ["React", "Node.js", "CSS", "Material-UI"],
     challenges: [
       "Situation: The MTN Pulse app experienced frequent delays and slow load times during peak usage hours, affecting customer satisfaction.",
       "Task: Improve the app’s performance and optimize its responsiveness.",

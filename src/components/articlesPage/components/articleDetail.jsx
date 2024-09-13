@@ -1,20 +1,65 @@
-import React from "react";
-import {
-  Box,
-  Typography,
-  Container,
-  Divider,
-  List,
-  ListItem,
-} from "@mui/material";
+import React, { useState, useEffect } from "react";
+import { Box, Typography, Container, List, ListItem } from "@mui/material";
 import { useParams } from "react-router-dom";
 import Navbar from "../../Navbar/Navbar";
-import { articles } from "./articles"; // Ensure this path is correct
 import FooterCard from "../../../container/Footer/FooterCard";
+import { client, urlFor } from "../../../client"; // Import your client or data-fetching utility
 
 const ArticleDetail = () => {
   const { slug } = useParams();
-  const article = articles.find((article) => article.slug === slug);
+  const [article, setArticle] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchArticle = async () => {
+      try {
+        const query = `*[_type == "article" && slug == "${slug}"]`;
+        const data = await client.fetch(query);
+        if (data.length > 0) {
+          setArticle(data[0]);
+        } else {
+          setError("Article not found");
+        }
+      } catch (err) {
+        setError("Error fetching article");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchArticle();
+  }, [slug]);
+
+  if (loading) {
+    return (
+      <Container
+        sx={{
+          paddingTop: "5rem",
+          paddingBottom: "2rem",
+          color: "#081e57",
+          textAlign: "center",
+        }}
+      >
+        <Typography variant="h5">Loading...</Typography>
+      </Container>
+    );
+  }
+
+  if (error) {
+    return (
+      <Container
+        sx={{
+          paddingTop: "5rem",
+          paddingBottom: "2rem",
+          color: "#081e57",
+          textAlign: "center",
+        }}
+      >
+        <Typography variant="h5">{error}</Typography>
+      </Container>
+    );
+  }
 
   if (!article) {
     return (
@@ -59,7 +104,7 @@ const ArticleDetail = () => {
             }}
           >
             <img
-              src={article.imageUrl}
+              src={urlFor(article.imageUrl)}
               alt={article.title}
               style={{
                 width: "100%",
@@ -110,7 +155,14 @@ const ArticleDetail = () => {
                 <List sx={{ paddingLeft: 2 }}>
                   {section.list.map((item, i) => (
                     <ListItem key={i} sx={{ padding: 0, marginBottom: 1 }}>
-                      • {item}
+                      <ul
+                        style={{
+                          paddingLeft: "20px",
+                          margin: 0,
+                        }}
+                      >
+                        <li>{item}</li>
+                      </ul>
                     </ListItem>
                   ))}
                 </List>

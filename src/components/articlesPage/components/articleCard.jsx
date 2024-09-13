@@ -1,6 +1,7 @@
 import { Box } from "@mui/material";
 import React from "react";
 import { useNavigate } from "react-router-dom"; // Assuming you're using react-router
+import { urlFor } from "../../../client";
 
 const ArticleCard = ({ article }) => {
   const navigate = useNavigate();
@@ -25,7 +26,7 @@ const ArticleCard = ({ article }) => {
         }}
       >
         <img
-          src={article.imageUrl}
+          src={urlFor(article.imageUrl)} // Ensure `imageUrl` is available in the article data
           alt={article.title}
           style={{
             width: "100%",

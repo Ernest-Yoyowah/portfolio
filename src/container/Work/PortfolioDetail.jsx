@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import {
   Box,
@@ -9,13 +9,43 @@ import {
   ListItem,
   Grid,
 } from "@mui/material";
-import { portfolioItems } from "./portfolioItems";
+import { client, urlFor } from "../../client"; // Adjust the import based on your data setup
 import { Navbar } from "../../components";
 import FooterCard from "../Footer/FooterCard";
 
 const PortfolioDetail = () => {
   const { slug } = useParams();
-  const item = portfolioItems.find((item) => item.slug === slug);
+  const [item, setItem] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchItem = async () => {
+      try {
+        const query = `*[_type == "portfolio" && slug.current == "${slug}"][0]`; // Adjust the query based on your schema
+        const data = await client.fetch(query);
+        setItem(data);
+        setLoading(false);
+      } catch (err) {
+        setError(err);
+        setLoading(false);
+      }
+    };
+
+    fetchItem();
+  }, [slug]);
+
+  if (loading) {
+    return <Typography>Loading...</Typography>;
+  }
+
+  if (error) {
+    return (
+      <Container sx={{ paddingTop: "5rem", textAlign: "center" }}>
+        <Typography variant="h5">An error occurred: {error.message}</Typography>
+      </Container>
+    );
+  }
 
   if (!item) {
     return (
@@ -24,6 +54,11 @@ const PortfolioDetail = () => {
       </Container>
     );
   }
+
+  // Function to resolve image references to URLs
+  const getImageUrl = (imageRef) => {
+    return urlFor(imageRef).url(); // Adjust as per your image URL generation logic
+  };
 
   return (
     <>
@@ -58,7 +93,7 @@ const PortfolioDetail = () => {
             <Typography variant="body1">{item.date}</Typography>
           </Box>
 
-          {/* Roles */}
+          {/* Role */}
           <Box sx={{ mb: 4 }}>
             <Typography sx={{ fontWeight: "bold", mb: 2, fontSize: "1.2rem" }}>
               Role
@@ -68,7 +103,7 @@ const PortfolioDetail = () => {
 
           {/* Challenges */}
           {item.challenges && (
-            <Box sx={{ mt: 4, mb: 4 }}>
+            <Box sx={{ my: 6 }}>
               <Typography
                 sx={{ fontWeight: "bold", mb: 2, fontSize: "1.2rem" }}
               >
@@ -78,7 +113,23 @@ const PortfolioDetail = () => {
                 {item.challenges.map((challenge, index) => (
                   <ListItem key={index}>
                     <Typography variant="body1" sx={{ mb: 2 }}>
-                      • {challenge}
+                      <ul
+                        style={{
+                          paddingLeft: "20px",
+                          margin: 0,
+                        }}
+                      >
+                        {challenge.situation && (
+                          <li> Situation: {challenge.situation}</li>
+                        )}
+                        {challenge.task && <li>Task: {challenge.task}</li>}
+                        {challenge.action && (
+                          <li>Action: {challenge.action}</li>
+                        )}
+                        {challenge.result && (
+                          <li>Result: {challenge.result}</li>
+                        )}
+                      </ul>
                     </Typography>
                   </ListItem>
                 ))}
@@ -97,7 +148,7 @@ const PortfolioDetail = () => {
             }}
           >
             <img
-              src={item.imgUrl}
+              src={getImageUrl(item.imgUrl.asset._ref)} // Adjust URL resolution as needed
               alt={item.title}
               style={{
                 width: "50%",
@@ -112,14 +163,16 @@ const PortfolioDetail = () => {
           {item.keyAchievements && (
             <Box sx={{ mb: 4 }}>
               <Typography
-                sx={{ fontWeight: "bold", mb: 2, fontSize: "1.2rem" }}
+                sx={{ fontWeight: "bold", mb: 2, fontSize: "1.2rem", mt: 5 }}
               >
                 Key Achievements
               </Typography>
               <List sx={{ paddingLeft: 2 }}>
                 {item.keyAchievements.map((achievement, index) => (
                   <ListItem key={index} sx={{ padding: 0, marginBottom: 1 }}>
-                    • {achievement}
+                    <ul style={{ paddingLeft: "20px", margin: 0 }}>
+                      <li>{achievement}</li>
+                    </ul>
                   </ListItem>
                 ))}
               </List>
@@ -140,7 +193,7 @@ const PortfolioDetail = () => {
                     }}
                   >
                     <img
-                      src={image}
+                      src={getImageUrl(image.asset._ref)} // Adjust URL resolution as needed
                       alt={`${item.title} - Additional ${index + 1}`}
                       style={{
                         width: "100%",
@@ -156,13 +209,17 @@ const PortfolioDetail = () => {
           )}
 
           {/* Technologies Used */}
-          <Typography sx={{ fontWeight: "bold", mb: 2, fontSize: "1.2rem" }}>
+          <Typography
+            sx={{ fontWeight: "bold", mb: 2, fontSize: "1.2rem", mt: 5 }}
+          >
             Technologies Used:
           </Typography>
           <List sx={{ paddingLeft: 2 }}>
             {item.technologies.map((tech, index) => (
               <ListItem key={index} sx={{ padding: 0, marginBottom: 1 }}>
-                • {tech}
+                <ul style={{ paddingLeft: "20px", margin: 0 }}>
+                  <li>{tech}</li>
+                </ul>
               </ListItem>
             ))}
           </List>
@@ -170,7 +227,7 @@ const PortfolioDetail = () => {
           {/* Experience the Design */}
           <Box sx={{ mt: 4 }}>
             <Typography sx={{ fontWeight: "bold", mb: 2, fontSize: "1.2rem" }}>
-              Experience the web app
+              Experience the project
               <Button
                 variant="text"
                 href={item.link}
